@@ -12,31 +12,31 @@ const FormTemplate = () => {
       .then((result) => {
           console.log(result.text);
           form.current.reset();
-          formMessage.innerHTML = "<p className='succes'>Message envoyé !</p>";
+          formMessage.innerHTML = "<p class='succes'>Message envoyé !</p>";
 
           setTimeout(() => {
             formMessage.innerHTML = "";
-          }, 2500);
+          }, 3000);
       }, (error) => {
           console.log(error.text);
-          formMessage.innerHTML = "<p className='error'>Une erreur s'est produite, veuillez réessayer !</p>";
+          formMessage.innerHTML = "<p class='error'>Une erreur s'est produite, veuillez réessayer !</p>";
 
           setTimeout(() => {
             formMessage.innerHTML = "";
-          }, 2500);
+          }, 3000);
       });
   };
 
   return (
     <div className="form-container">
         <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
+            <label>Nom <span>*</span></label>
             <input type="text" name="name" required/>
-            <label>Email</label>
+            <label>Email <span>*</span></label>
             <input type="email" name="email" required autoComplete='off'/>
             <label>Message</label>
             <textarea name="message" />
-            <input type="submit" value="Envoyer" />
+            <input className="btn-submit" type="submit" value="Envoyer" />
         </form>
 
         <div className="form-message">

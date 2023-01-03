@@ -1,15 +1,76 @@
+.form-container {
+    margin-top: 100px;
+}
+
 form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     width: 50%;
     min-width: 300px;
     max-width: 600px;
     margin: 0 auto;
+    margin-top: 20px;
+}
+
+form label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+form label span {
+    color: red;
 }
 
 form input {
     border: 1px solid black;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 form textarea {
     border: 1px solid black;
+    margin-bottom: 10px;
+    min-height: 200px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form .btn-submit {
+    align-self: flex-end;
+    width: 250px;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+form .btn-submit:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.form-message {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+.form-message .succes {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(64, 155, 64);
+    width: 100%;
+    text-align: center;
+    padding: 18px 0px;
+}
+
+.form-message .error {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(156, 33, 33);
+    width: 100%;
+    text-align: center;
+    padding: 18px 0px;
 }
